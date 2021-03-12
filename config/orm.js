@@ -1,3 +1,4 @@
+//code from cats activity
 // Import MySQL connection.
 var connection = require("../config/connection.js");
 
