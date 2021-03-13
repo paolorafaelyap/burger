@@ -1,6 +1,6 @@
 const express = require("express");
 
-var PORT = process.env.PORT || 3306;
+var PORT = process.env.PORT || 8080;
 var app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
@@ -15,10 +15,10 @@ var expressHandlebars = require("express-handlebars");
 app.engine("handlebars", expressHandlebars({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-var routes = require("./controllers/burgers_controller.js");
+var routes = require("./controllers/burgers_controllers.js");
 
 app.use(routes);
 
 app.listen(PORT, function() {
-  console.log("Listening on port:%s", PORT);
+  console.log("Listening on PORT:%s", PORT);
 });
